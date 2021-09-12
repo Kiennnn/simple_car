@@ -4,6 +4,15 @@
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
   name="simple_car">
+  <link name="base_footprint">
+  </link>
+
+  <joint name="fixed" type="fixed">
+    <origin xyz="0 0 0.005" rpy="0 0 0"/>
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+  </joint>
+
   <link
     name="base_link">
     <inertial>
